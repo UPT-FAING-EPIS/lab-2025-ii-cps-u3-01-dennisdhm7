@@ -66,4 +66,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: bddreporte
           publish_dir: ./report/
-          keep_files: true

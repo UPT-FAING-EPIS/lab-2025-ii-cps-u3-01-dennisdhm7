@@ -1,6 +1,9 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/i0mSHOez)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=21882931)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=21881981)
 # SESION DE LABORATORIO N° 01: GESTION AUTOMATIZADA DE PRUEBAS CON GITHUB
+
+## Estudiante: Christian Dennis Hinojosa Mucho
+## Codigo: 2019065161
 
 ## OBJETIVOS
   * Desarrollar la automatización de la gestión de pruebas de una aplicación utilizando Github Actions.
@@ -27,39 +30,47 @@
 
 ## DESARROLLO
 1. Abrir un navegador de internet e ingrear a la pagina de SonarCloud (https://www.sonarsource.com/products/sonarcloud/), iniciar sesión con su cuenta de Github.
+
+    ![imagen](imagenes/Screenshot_1.png)
+
 2. En el navegador de internet, en la pagina de SonarCloud, generar un nuevo token con el nombre que desee, luego de generar el token, guarde el resultado en algún archivo o aplicación de notas. Debido a que se utilizará mas adelante.
+
+    ![imagen](imagenes/Screenshot_2.png)
+
 3. En el navegador de internet, en la pagina de SonarCloud, hacer click en el icono + y luego en la opción *Analyze projects*. En la ventana de Analyze Projects, seleccionar la opción *create a project manually* para crear un proyecto de manera manual.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/17b92d10-c2ca-4f7f-90d5-919c0b27ca6b)
+    ![imagen](imagenes/Screenshot_3.png)
 
 4. En el navegador de internet, en la pagina de SonarCloud, en la pagina de nuevo proyecto ingresar el nombre *BancaApp*, tomar nota del valor generado en el cuadro Project Key que sera utilizado mas adelante, confirmar la creación del proyecto haciendo click en el boton Next.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/570d2cb9-a6d4-4629-a981-8408c308dc1e)
+    ![imagen](imagenes/Screenshot_4.png)
 
 5. En el navegador de internet, en la pagina de SonarCloud, en la pagina de *Set up your project or Clean as You Code*, seleccionar la opción *Previuos version*, confirmar la creación del proyecto haciendo click en el boton Create Project.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/3d7c6776-e79e-4f68-bd40-5a1175c0b150)
+    
+    ![imagen](imagenes/Screenshot_5.png)
 
-5. En el navegador de internet, ingresar a la pagina Github del repositorio de su proyecto. En la sección Code, crear la rama *bddreporte*
-   ![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/abbdaa3b-1af8-4d6e-b693-4f83e443d20b)
+6. En el navegador de internet, ingresar a la pagina Github del repositorio de su proyecto. En la sección Code, crear la rama *bddreporte*
+    
+    ![imagen](imagenes/Screenshot_6.png)
 
-6. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Settings, ingresar a la opción Pages y en Branch seleccionar la rama recientemente creada, seguidamente hacer click en el botón *Save*.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/e5c84d72-0b80-4f10-83b8-bed3619d1101)
+7. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Settings, ingresar a la opción Pages y en Branch seleccionar la rama recientemente creada, seguidamente hacer click en el botón *Save*.
+    ![imagen](imagenes/Screenshot_7.png)
 
-7. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Settings, en la opción Pages despues de unos minutos aparecerá la url publica del proyecto. Tomar nota de esa dirección que sera utilizada mas adelante.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/23f7c00f-9709-4442-b84f-9323ecfe744f)
+8. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Settings, en la opción Pages despues de unos minutos aparecerá la url publica del proyecto. Tomar nota de esa dirección que sera utilizada mas adelante.
+    ![imagen](imagenes/Screenshot_8.png)
 
-8. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Settings, ingresar a la opción Secrets and variables y luego en la opción Actions, hacer click en el botón *New repository secret*.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/19bf5a41-1b5f-4664-86cc-c821fcc01551)
+9. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la sección Settings, ingresar a la opción Secrets and variables y luego en la opción Actions, hacer click en el botón *New repository secret*.
+    ![imagen](imagenes/Screenshot_10.png)
   
-9. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la pagina de Actions secrets / New Secret, en el nombre ingresar el valor SONAR_TOKEN y en secreto ingresar el valor del token de SonarCloud generado en el paso 2.
-![image](https://github.com/UPT-FAING-EPIS/lab_ci_pruebas_01/assets/10199939/3320bc5c-32c8-4f4c-bbcb-5852909d522c)
+10. En el navegador de internet, en pagina Github del repositorio de su proyecto. En la pagina de Actions secrets / New Secret, en el nombre ingresar el valor SONAR_TOKEN y en secreto ingresar el valor del token de SonarCloud generado en el paso 2.
+    ![imagen](imagenes/Screenshot_9.png)
 
-10. Abrir Visual Studio Code, cargar la carpeta del repositorio del proyecto. Seguidamente crear la carpeta `.github` y dentro de esta la carpeta `workflows`. Seguidamente crear el archivo ci.yml con el siguiente contenido
+11. Abrir Visual Studio Code, cargar la carpeta del repositorio del proyecto. Seguidamente crear la carpeta `.github` y dentro de esta la carpeta `workflows`. Seguidamente crear el archivo ci.yml con el siguiente contenido
 ```Yaml
 name: Tarea Automatizada de ejecución de pruebas
 
 env:
   DOTNET_VERSION: '8.x'                     # la versión de .NET
-  SONAR_ORG: 'p-cuadros'                    # Nombre de la organización de sonar cloud
-  SONAR_PROJECT: 'p-cuadros_bancaapp'        # Key ID del proyecto de sonar
+  SONAR_ORG: 'dennisdhm7'                    # Nombre de la organización de sonar cloud
+  SONAR_PROJECT: 'dennisdhm7_bancaapp'        # Key ID del proyecto de sonar
 on:
   push:
     branches: [ "main" ]
@@ -112,7 +123,7 @@ jobs:
         run: dotnet tool install -g SpecFlow.Plus.LivingDoc.CLI
       - name: Generate living doc
         run: livingdoc test-assembly ./Bank.Domain.Tests/bin/Debug/net8.0/Bank.Domain.Tests.dll -t ./Bank.Domain.Tests/bin/Debug/net8.0/TestExecution.json -o ./report/index.html
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: specflow
           path: report
